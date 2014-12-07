@@ -1,0 +1,198 @@
+@fontcolor-blue: #186d94;
+@fontcolor-white: #ffffff;
+@fontcolor-gray: #99a3b1;
+@iconcolor-gray: #c8c8c8;
+@iconbg-gray: #e3e3e3;
+@iconcolor-green: #48cfad;
+
+@font-face {
+	font-family: RobotoLight;
+	src: url(../fonts/roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+	font-family: RobotoRegular;
+	src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: RobotoMedium;
+	src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+	font-family: RobotoBold;
+	src: url(../fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+	font-family: PTSansRegular;
+	src: url(../fonts/PT_Sans/PT_Sans-Web-Regular.ttf);
+}
+
+@font-face {
+	font-family: PTSansBold;
+	src: url(../fonts/PT_Sans/PT_Sans-Web-Bold.ttf);
+}
+
+
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+input, select, button {
+	outline: none;
+}
+
+.logo {
+	padding-top: 5px;
+	display: inline-block;
+
+	.logo__text {
+		font-family: RobotoMedium;
+		font-size: 18px;
+		display: inline-block;
+	}
+	.logo__icon {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+header {
+	position: fixed;
+	width: 100%;
+
+	.header-centered {
+		width: 1000px;
+		margin: auto;
+	}
+
+	.logo-header {
+
+		float: left;
+
+		div {
+			color: @fontcolor-blue;
+		}
+	}
+
+	.navigation {
+		float: right;
+
+		.navs {
+			display: inline-block;
+
+			a {
+				display: block;
+				text-decoration: none;
+				padding: 12px 19px;
+				color: @fontcolor-white;
+			}
+
+			img {
+				width: 32px;
+				height: 32px;
+				vertical-align: middle;
+			}
+		}
+
+		.navs-normal {
+			border-left: 1px solid @iconcolor-gray;
+
+			a {
+				background: @fontcolor-white;
+
+				&:hover {
+					background: @iconbg-gray;
+				}
+				span {
+					display: none;
+					font-family: RobotoBold;
+					font-size: 9px;
+
+					&:hover {
+						display: inline;
+					}
+				}
+			}
+		}
+
+		.navs-buy {
+			a {
+				background: @iconcolor-green;
+
+				span {
+					font-family: PTSansBold;
+					font-size: 18px;
+					margin-left: 5px;
+				}
+			}
+
+			img {
+
+			}
+		}
+
+	}
+}
+
+
+
+.slider {
+	width: 100%;
+	height: 450px;
+	position: relative;
+	top: 56px;
+	background: url(../img/bg-1.jpg);
+
+	&__title {
+		display: inline-block;
+
+		& > span {
+
+		}
+	}
+
+	&__item {
+		width: 900px;
+		margin: 0 auto;
+
+		& > img {
+			position: relative;
+			top: 30px;
+			display: inline-block;
+		}
+
+		& > div {
+			width: 465px;
+			display: inline-block;
+			font-family: PTSansBold;
+			font-size: 30px;
+			color: @fontcolor-white;
+		}
+	}
+
+	.logo-slider {
+		color: @fontcolor-white;
+	}
+
+	&__text {
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
