@@ -10,6 +10,7 @@
 
 @color-gray-opacity: rgba(227, 227, 227, 0.5);
 @color-blue-opacity: rgba(22, 94, 120, .2);
+@color-wave-opacity: rgba(72, 207, 173, .5);
 
 @font-face {
 	font-family: RobotoThin;
@@ -165,10 +166,6 @@ header {
 					margin-left: 5px;
 				}
 			}
-
-			img {
-
-			}
 		}
 
 	}
@@ -185,8 +182,57 @@ header {
 	height: 450px;
 	background: url(../img/bg-1.jpg);
 
+	.fotorama__wrap {
+		margin: 0 auto;
+
+		.fotorama__arr {
+			background: url(../img/arrow.png);
+			width: 20px;
+			height: 20px;
+			transform: none !important;
+			opacity: 1 !important;
+			z-index: 100;
+			margin-top: 0;
+
+			// &:before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	width: 30px;
+			// 	height: 450px;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	background: red;
+			// 	opacity: 1!important;
+			// }
+		}
+
+		.fotorama__arr--next {
+			transform: rotate(180deg) !important;
+		}
+
+		.fotorama__stage__shaft {
+			transition-timing-function: ease!important;
+		}
+
+		.fotorama__nav__frame--dot {
+			width: 13px!important;
+			height: 13px!important;
+			border: 1px solid @color-wave-opacity;
+			border-radius: 50%;
+			margin-right: 5px;
+		}
+
+		.fotorama__nav__frame--dot.fotorama__active {
+			background: @color-wave-opacity !important;
+		}
+
+		.fotorama__dot {
+			border: none;
+		}
+	}
+
 	&__item {
-		width: 900px;
+		width: 815px;
 		margin: 0 auto;
 
 		& > img {
@@ -306,7 +352,6 @@ header {
 			background: @color-white;
 			z-index: -1;
 		}
-
 	}
 
 	ul {
