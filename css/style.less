@@ -6,6 +6,7 @@
 @color-gray-light: #e3e3e3;
 @color-wave-dark: #48cfad;
 @color-wave-light: #aadcdc;
+@color-bg-gray: #f7fbfb;
 
 @color-gray-opacity: rgba(227, 227, 227, 0.5);
 @color-blue-opacity: rgba(22, 94, 120, .2);
@@ -97,6 +98,7 @@ header {
 	z-index: 10;
 	width: 100%;
 	background: @color-white;
+	border-bottom: 1px solid @color-blue-opacity;
 
 	.header-centered {
 		width: 1000px;
@@ -106,7 +108,6 @@ header {
 	.logo-header {
 
 		float: left;
-
 		div {
 			color: @color-blue;
 		}
@@ -324,6 +325,8 @@ header {
 	position: relative;
 	padding: 60px 0;
 	text-align: center;
+	background:@color-bg-gray;
+
 
 	&:before {
 		content: '';
@@ -346,6 +349,7 @@ header {
 		width: 440px;
 		height: 465px;
 		border: 1px dashed @color-gray-light;
+		background: @color-white;
 		padding: 10px;
 		text-align: left;
 		display: inline-block;
@@ -432,6 +436,87 @@ header {
 		-moz-box-shadow:    0px 3px 0px 0px rgba(56, 174, 164, 1);
 		box-shadow:         0px 3px 0px 0px rgba(56, 174, 164, 1);
 	}
+}
+
+.partners {
+	width: 940px;
+	margin: 0 auto;
+
+	&__item {
+		background:@color-bg-gray;
+		border: 1px dashed @color-gray-light;
+		width: 230px;
+		height: 285px;
+		display: inline-block;
+		margin: 110px 0 30px 0;
+		padding: 0 30px 35px 30px;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -70px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 135px;
+			height: 135px;
+			border-radius: 50%;
+			background: @color-white;
+		}
+
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+
+		img {
+			position: absolute;
+			top: -80px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		li {
+			font-size: 13px;
+			font-family: RobotoLight;
+			color: @color-blue;
+			text-align: left;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		font-family: PTSansBold;
+		text-transform: uppercase;
+		color: @color-blue;
+		margin: 85px 0 30px 0;
+
+		span {
+			font-size: 24px;
+		}
+	}
+}
+
+.brands {
+	width: 100%;
+	background: @color-bg-gray;
+	margin: auto;
+	text-align: center;
+	padding: 15px 0;
+
+	img:not(:last-child) {
+		margin-right: 32px; 
+	}
+}
+
+footer {
+	width: 100%;
+	height: 140px;
+	background: @color-blue;
+	position: relative;
+	top: 56px;
 }
 
 
