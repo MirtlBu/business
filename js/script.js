@@ -22,3 +22,16 @@ $(function() {
 		  .append(createArrow(MOD_ARROW_NEXT, '>'));
 	}).fotorama();
 });
+
+// $f.fotorama({
+	// 	width: 860,
+	// 	height: 410,
+	// 	loop: true,
+	// 	keyboard: true,
+	// 	swipe: true,
+	// 	transitionduration: 1000,
+	// 	margin: 30,
+	// 	arrows: false,
+	// 	auto: false,
+		
+	// });

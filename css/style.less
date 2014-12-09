@@ -1,16 +1,16 @@
 @color-blue: #186d94;
-@color-green: #48cfad;
 @color-white: #ffffff;
 @color-gray-dark: #99a3b1;
 @color-gray-medium: #c8c8c8;
 @color-gray-light: #e3e3e3;
-@color-wave-dark: #48cfad;
-@color-wave-light: #aadcdc;
+@color-aquamarine-dark: #38aea4;
+@color-aquamarine-medium: #48cfad;
+@color-aquamarine-light: #aadcdc;
 @color-bg-gray: #f7fbfb;
 
 @color-gray-opacity: rgba(227, 227, 227, 0.5);
 @color-blue-opacity: rgba(22, 94, 120, .2);
-@color-wave-opacity: rgba(72, 207, 173, .5);
+@color-aquamarine-opacity: rgba(72, 207, 173, .5);
 
 @font-face {
 	font-family: RobotoThin;
@@ -77,6 +77,7 @@ input, select, button {
 	.logo__icon {
 		display: inline-block;
 		vertical-align: middle;
+		margin-top: 2px;
 	}
 }
 
@@ -96,6 +97,7 @@ header {
 	position: fixed;
 	z-index: 10;
 	width: 100%;
+	height: 59px;
 	background: @color-white;
 	border-bottom: 1px solid @color-blue-opacity;
 
@@ -117,12 +119,18 @@ header {
 
 		.navs {
 			display: inline-block;
+			height: 40px;
+			margin-top: 10px;
+			
 
 			a {
 				display: block;
 				text-decoration: none;
-				padding: 12px 19px;
 				color: @color-white;
+				height: 45px;
+				margin-top: -10px;
+				padding-top: 15px;
+				text-align: center;
 				-webkit-font-smoothing: antialiased;
 			}
 
@@ -134,10 +142,13 @@ header {
 		}
 
 		.navs-normal {
-			border-left: 1px solid @color-blue-opacity;
 
+			width: 80px;
+			border-left: 1px solid @color-gray-light;
 			a {
-				background: @color-white;
+				
+				width: 82px;
+				margin-left: -1px;
 
 				&:hover {
 					background: @color-gray-light;
@@ -155,8 +166,14 @@ header {
 		}
 
 		.navs-buy {
+
+			width: 140px;
 			a {
-				background: @color-green;
+				background: @color-aquamarine-medium;
+				width: 140px;
+				&:hover {
+					background: darken(@color-aquamarine-medium, 10%);
+				}
 
 				span {
 					font-family: PTSansBold;
@@ -172,7 +189,7 @@ header {
 
 .main {
 	position: relative;
-	top: 56px;	
+	top: 60px;	
 }
 
 .slider {
@@ -221,13 +238,13 @@ header {
 		.fotorama__nav__frame--dot {
 			width: 13px!important;
 			height: 13px!important;
-			border: 1px solid @color-wave-opacity;
+			border: 1px solid @color-aquamarine-opacity;
 			border-radius: 50%;
 			margin-right: 5px;
 		}
 
 		.fotorama__nav__frame--dot.fotorama__active {
-			background: @color-wave-opacity !important;
+			background: @color-aquamarine-opacity !important;
 		}
 
 		.fotorama__dot {
@@ -292,8 +309,14 @@ header {
 	}
 
 	.button-slider {
-		border: 1px solid rgba(255, 255, 255, .26);
-		color: @color-gray-opacity;
+		border: 1px solid lighten(@color-aquamarine-opacity, 30%);
+		color: lighten(@color-aquamarine-opacity, 30%);
+
+		&:hover {
+			border: 1px solid lighten(@color-aquamarine-opacity, 10%);
+			background: lighten(@color-aquamarine-opacity, 30%);
+			color: @color-white;
+		}
 	}
 }
 
@@ -320,7 +343,7 @@ header {
 		&-1 {
 			font-family: RobotoRegular;
 			font-size: 14px;
-			color: @color-green;
+			color: @color-aquamarine-medium;
 			text-transform: uppercase;
 			position: relative;
 			top: 10px;
@@ -436,9 +459,9 @@ header {
 			a {
 				font-size: 12px;
 				font-family: RobotoRegular;
-				color: @color-wave-light;
+				color: @color-aquamarine-opacity;
 				text-decoration: none;
-				border-bottom: 1px solid @color-wave-light;
+				border-bottom: 1px solid @color-aquamarine-opacity;
 				cursor: pointer;
 			}
 
@@ -454,8 +477,14 @@ header {
 		}
 
 		.button-item {
-			border: 1px solid @color-wave-light;
-			color: @color-wave-light;
+			border: 1px solid @color-aquamarine-opacity;
+			color: @color-aquamarine-opacity;
+
+			&:hover {
+				border: 1px solid lighten(@color-aquamarine-opacity, 20%);
+				background: @color-aquamarine-opacity;
+				color: @color-white;
+			}
 		}
 
 		.shops__footer {
@@ -483,13 +512,16 @@ header {
 		float: none;
 		font-size: 18px;
 		font-family: PTSansBold;
-		background: #48cfad;
+		background: @color-aquamarine-medium;
 		color: @color-white;
 		border: none;
 		padding: 10px 25px;
 		-webkit-box-shadow: 0px 3px 0px 0px rgba(56, 174, 164, 1);
 		-moz-box-shadow:    0px 3px 0px 0px rgba(56, 174, 164, 1);
 		box-shadow:         0px 3px 0px 0px rgba(56, 174, 164, 1);
+		&:hover {
+			background: @color-aquamarine-dark;
+		}
 	}
 }
 
