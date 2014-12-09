@@ -16,22 +16,23 @@ $(function() {
 	}
 
 	var $f = $('.' + BLOCK);
-	$f.on('fotorama:ready', function (e, fotorama) {
+	
+	$f.on('fotorama:load', function (e, fotorama) {
 		$f.find('.' + ELEM_WRAP)
 		  .append(createArrow(MOD_ARROW_PREV, '<'))
 		  .append(createArrow(MOD_ARROW_NEXT, '>'));
-	}).fotorama();
+	}).fotorama({
+		width: 860,
+		height: 410,
+		loop: true,
+		keyboard: true,
+		swipe: true,
+		transitionduration: 1000,
+		margin: 30,
+		arrows: false,
+		auto: false,
+		spinner: false
+	});
+
 });
 
-// $f.fotorama({
-	// 	width: 860,
-	// 	height: 410,
-	// 	loop: true,
-	// 	keyboard: true,
-	// 	swipe: true,
-	// 	transitionduration: 1000,
-	// 	margin: 30,
-	// 	arrows: false,
-	// 	auto: false,
-		
-	// });
