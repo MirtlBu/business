@@ -53,7 +53,6 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	-webkit-font-smoothing: antialiased;
 }
 
 ul, li {
@@ -73,7 +72,6 @@ input, select, button {
 	.logo__text {
 		font-family: RobotoBold;
 		font-size: 18px;
-		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 	}
 	.logo__icon {
@@ -183,31 +181,37 @@ header {
 	background: url(../img/bg-1.jpg);
 
 	.fotorama__wrap {
+		position: relative;
 		margin: 0 auto;
+		padding: 0 30px;
 
-		.fotorama__arr {
+		.fotorama__arrow {
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
 			background: url(../img/arrow.png);
 			width: 20px;
 			height: 20px;
-			transform: none !important;
-			opacity: 1 !important;
-			z-index: 100;
-			margin-top: 0;
-
-			// &:before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	width: 30px;
-			// 	height: 450px;
-			// 	top: 0;
-			// 	bottom: 0;
-			// 	background: red;
-			// 	opacity: 1!important;
-			// }
+			outline: none;
+			cursor: pointer;
 		}
 
-		.fotorama__arr--next {
-			transform: rotate(180deg) !important;
+		.fotorama__arrow--prev {
+			left: 0;
+		}
+
+		.fotorama__arrow--next {
+			right: 0;
+			transform: rotate(180deg);
+		}
+
+		.fotorama__stage:before,
+		.fotorama__stage:after {
+			content: none
+		}
+
+		.fotorama__stage {
+			-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 0, rgba(0,0,0,1) 40px, rgba(0,0,0,1) 820px, rgba(0,0,0,0) 860px);
 		}
 
 		.fotorama__stage__shaft {
@@ -299,11 +303,13 @@ header {
 	overflow: hidden;
 
 	&__item {
-		width: 280px;
+		width: 265px;
 		padding: 15px 0;
-		margin-right: 70px;
+		margin: 0 62px 0 5px;
 		display: inline-block;
 		position: relative;
+		float: right;
+		background: @color-white;
 
 		img {
 			display: inline-block;
@@ -316,7 +322,6 @@ header {
 			font-size: 14px;
 			color: @color-green;
 			text-transform: uppercase;
-			-webkit-font-smoothing: antialiased;
 			position: relative;
 			top: 10px;
 		}
@@ -325,7 +330,6 @@ header {
 			font-family: PTSansBold;
 			font-size: 17px;
 			color: @color-blue;
-			-webkit-font-smoothing: antialiased;
 			position: relative;
 			top: 10px;
 		}		
@@ -336,21 +340,27 @@ header {
 			border: 1px solid @color-gray-medium;
 			width: 200px;
 			height: 200px;
-			top: 35px;
-			left: 145px;
+			top: 33px;
+			left: 137px;
 			border-radius: 10px;
 			transform: rotate(45deg) skew(20deg, 20deg);
 			z-index: -1;
 		}
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -20px;
-			width: 260px;
-			height: 300px;
-			background: @color-white;
-			z-index: -1;
+		
+		&:last-child {
+
+			&:after {
+				content: '';
+				position: absolute;
+				border: 1px solid @color-gray-medium;
+				width: 200px;
+				height: 200px;
+				top: 33px;
+				left: -197px;
+				border-radius: 10px;
+				transform: rotate(45deg) skew(20deg, 20deg);
+				z-index: -1;
+			}
 		}
 	}
 
@@ -361,7 +371,7 @@ header {
 	li {
 		font-size: 13px;
 		font-family: RobotoThin;
-		margin-bottom: 10px;
+		margin: 0 0 10px 15px;
 	}
 }
 
