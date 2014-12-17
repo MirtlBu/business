@@ -216,7 +216,6 @@ header {
 
 
 .main {
-	width: 100%;
 	position: relative;
 	top: 60px;	
 }
@@ -432,6 +431,29 @@ header {
 		font-size: 13px;
 		font-family: RobotoThin;
 		margin: 0 0 10px 15px;
+	}
+
+	@media (max-width: 1060px) {
+		.wrap {
+			width: 1020px;
+		}
+		.steps__item {
+			width: 215px;
+			margin: 0 90px 0 5px;
+
+			&:before {
+				top: 60px;
+				left: 100px;
+			}
+
+			&:last-child {
+
+				&:after {
+					top: 60px;
+					left: -197px;
+				}
+			}
+		}
 	}
 }
 
