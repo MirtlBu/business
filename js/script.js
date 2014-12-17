@@ -27,11 +27,12 @@ $(function() {
 		loop: true,
 		keyboard: true,
 		swipe: true,
-		transitionduration: 1000,
+		transitionduration: 2000,
 		margin: 30,
 		arrows: false,
 		auto: false,
-		spinner: false
+		spinner: false,
+		nav: false
 	});
 
 });
